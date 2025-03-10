@@ -18,3 +18,7 @@ print(R) # could have stopped earlier, given a check like if R[i] - R[i-1] = 0 -
 for i, ratio in enumerate(R, 1):
     error = abs(ratio - phi)
     print(f"Step {i}: Error = {error:.15f}")
+
+for i in range(1, 37):
+    error_ratio = abs((phi - R[i]) / (phi - R[i-1]))
+    print(f"Step {i}: Error ratio = {error_ratio:.6f}")
